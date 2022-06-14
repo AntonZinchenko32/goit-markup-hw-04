@@ -19,6 +19,9 @@
   --shadow-color-01: rgba(0, 0, 0, 0.12);
   --shadow-color-02:rgba(0, 0, 0, 0.14);
   --shadow-color-03:rgba(0, 0, 0, 0.2);
+
+  --gradient-color-01: rgba(47, 48, 58, 0.4);
+  --gradient-color-02: rgba(47, 48, 58, 0.4);
 }
 
 /* *****Styling body***** */
@@ -57,18 +60,20 @@ img {
   height: auto;
 }
 
-
+/* Контейнер */
 .container {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
+/* Шапка */
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
   border-bottom: 1px solid var(--border-color-01);
 }
 .header-container {  
+  /* outline: solid 1px blue; */
   display: flex;
   align-items: center;
 }
@@ -97,26 +102,46 @@ img {
 .nav-list,
 .address-header-list {
   display: flex;
+  letter-spacing: 0.02em;
 }
 .nav-list li:not(:last-child), 
 .address-header-list li:not(:last-child) {
   margin-right: 50px;
 }
-.footer .logo-link .logo-link-second-part {
-  color: var(--background-color-01);
-}
 .address-header-list {
+  /* outline: solid 1px green; */
   color: var(--text-color-02);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
 }
-.nav-list, .address-header-list {
-  letter-spacing: 0.02em;
+.address-header-list-item::before {
+  /* outline: solid 1px red; */
+  content: '';
+  display: inline-flex;
+  margin-right: 10px;
+}
+.icon-envelope::before {
+  width: 16px;
+  height: 12px;
+  background-image: url(../images/header-img-envelope.svg);
+}
+.icon-smartphone::before {
+  width: 10px;
+  height: 16px;
+  background-image: url(../images/header-img-smartphone.svg);
 }
 /* Герой */
 .hero {  
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: var(--brand-color-02);
+  background-image: 
+  linear-gradient(to right, var(--gradient-color-01), 
+  var(--gradient-color-02)), 
+  url(../images/hero-img-team.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -161,6 +186,28 @@ img {
 }
 .benefits-list li:not(:last-child) {
   margin-right: 30px;
+}
+.benefits-list-item::before {
+  content:'';
+  display: block;
+  margin-bottom: 30px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--background-color-02);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-antenna::before {
+  background-image: url(../images/benefits-img-antenna.png);
+}
+.icon-clock::before {
+  background-image: url(../images/benefits-img-clock.png);
+}
+.icon-diagram::before {
+  background-image: url(../images/benefits-img-diagram.png);
+}
+.icon-astronaut::before {
+  background-image: url(../images/benefits-img-astronaut.png);
 }
 .benefits-subtitle {
   margin-bottom: 10px;
@@ -232,12 +279,19 @@ img {
 .team-desc {
   color: var(--text-color-02);
 }
+.team-list-item::after {
+  content: '';
+  
+}
 
 /* Футер */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--brand-color-02);
+}
+.footer .logo-link .logo-link-second-part {
+  color: var(--background-color-01);
 }
 .address-text-box {
   margin-top: 20px;
