@@ -124,12 +124,12 @@ img {
 .icon-envelope::before {
   width: 16px;
   height: 12px;
-  background-image: url(../images/header-img-envelope.svg);
+  background-image: url(../images/header-icon-envelope.svg);
 }
 .icon-smartphone::before {
   width: 10px;
   height: 16px;
-  background-image: url(../images/header-img-smartphone.svg);
+  background-image: url(../images/header-icon-smartphone.svg);
 }
 /* Герой */
 .hero {  
@@ -198,16 +198,16 @@ img {
   background-position: center;
 }
 .icon-antenna::before {
-  background-image: url(../images/benefits-img-antenna.png);
+  background-image: url(../images/benefits-icon-antenna.png);
 }
 .icon-clock::before {
-  background-image: url(../images/benefits-img-clock.png);
+  background-image: url(../images/benefits-icon-clock.png);
 }
 .icon-diagram::before {
-  background-image: url(../images/benefits-img-diagram.png);
+  background-image: url(../images/benefits-icon-diagram.png);
 }
 .icon-astronaut::before {
-  background-image: url(../images/benefits-img-astronaut.png);
+  background-image: url(../images/benefits-icon-astronaut.png);
 }
 .benefits-subtitle {
   margin-bottom: 10px;
@@ -268,7 +268,7 @@ img {
   background-color: var(--background-color-01);
 }
 .team-text-box {
-  padding: 30px 0;
+  padding: 30px 0px 16px;
   text-align: center;
 }
 .team-subtitle {
@@ -279,11 +279,32 @@ img {
 .team-desc {
   color: var(--text-color-02);
 }
-.team-list-item::after {
-  content: '';
-  
+.team-icon-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
 }
-
+.team-icon-list li {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.icon-list-item-instagram {
+  background-image: url(../images/team-icon-instagram.png);
+}
+.icon-list-item-twitter {
+  background-image: url(../images/team-icon-twitter.png);
+}
+.icon-list-item-facebook {
+  background-image: url(../images/team-icon-facebook.png);
+}
+.icon-list-item-linkedin {
+  background-image: url(../images/team-icon-linkedin.png);
+}
 /* Футер */
 .footer {
   padding-top: 60px;
