@@ -19,11 +19,17 @@
   --shadow-color-01: rgba(0, 0, 0, 0.12);
   --shadow-color-02:rgba(0, 0, 0, 0.14);
   --shadow-color-03:rgba(0, 0, 0, 0.2);
+  --shadow-color-04: rgba(0, 0, 0, 0.6);
+  --shadow-color-05: rgba(0, 0, 0, 0.16);
+  --shadow-color-06: rgba(0, 0, 0, 0.1);
+  --shadow-color-07: rgba(0, 0, 0, 0.08);
+
 
   --gradient-color-01: rgba(47, 48, 58, 0.4);
   --gradient-color-02: rgba(47, 48, 58, 0.4);
+  
   --icon-color-01: #AFB1B8;
-  --icon-color-02:rgba(255, 255, 255, 0.1);
+  --icon-color-02: rgba(255, 255, 255, 0.1);
 }
 
 /* *****Styling body***** */
@@ -441,19 +447,27 @@ img {
   color:var(--background-color-01);
 }
 .link-clients:hover {
-  color:var(--brand-color-01);
   border-color: var(--brand-color-01);
 }
-.icon-clients:hover {
-  fill:currentColor;
-}
-
 .button:hover,
 .button:focus,
 .button-active:hover,
 .button-active:focus {
   background-color: var(--highlight-button-color);
   color: var(--background-color-01);
+}
+.gallery-filter-list .button:hover {
+  box-shadow:
+  0px 3px 1px var(--shadow-color-06), 
+  0px 1px 2px var(--shadow-color-07), 
+  0px 2px 2px var(--shadow-color-01);
+}
+.gallery-list li:hover {
+  cursor: pointer;
+  box-shadow: 
+  0px 1px 1px var(--shadow-color-01), 
+  0px 4px 4px var(--shadow-color-04), 
+  1px 4px 6px var(--shadow-color-05);
 }
 /* Приховує заголовки */
 .visually-hidden {
